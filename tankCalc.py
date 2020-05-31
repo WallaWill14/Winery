@@ -1,4 +1,4 @@
-# barrelCalc.py
+# tankCalc.py
 # Cole Meyers
 # Will Thompson
 # 28 May 2020
