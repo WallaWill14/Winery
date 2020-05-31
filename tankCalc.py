@@ -50,29 +50,29 @@ def runCalc():
 
 	# get dip measurement entered by user in input box
 	dip = gui.getWidget('Dip (inches)').value()
-
+	dip = float(dip)
 	# calculates liquid volume in specified tank based on the chart Will provided 28 May 2020
 	# NOTE: some of the formulas overlap, hence there are less than 22 if/elifs below
 	if tank == 'T1':
-		gal = tank_specs[0][0] * (tank_specs[0][1] - float(dip))
+		gal = tank_specs[0][0] * (tank_specs[0][1] - dip)
 	elif tank == 'T1' or tank == 'T2' or tank == 'T3' or tank == 'T4' or tank == 'T5':
-		gal = (tank_specs[1][0] * (tank_specs[1][1] - float(dip))) + tank_specs[1][2]
+		gal = (tank_specs[1][0] * (tank_specs[1][1] - dip)) + tank_specs[1][2]
 	elif tank == 'T6' or tank == 'T7' or tank == 'T8':
-		gal = (tank_specs[2][0] * (tank_specs[2][1] - float(dip))) + tank_specs[2][2]
+		gal = (tank_specs[2][0] * (tank_specs[2][1] - dip)) + tank_specs[2][2]
 	elif tank == 'T9':
-		gal = (tank_specs[3][0] * (tank_specs[3][1] - float(dip))) + tank_specs[3][2]
+		gal = (tank_specs[3][0] * (tank_specs[3][1] - dip)) + tank_specs[3][2]
 	elif tank == 'T10' or tank == 'T11' or tank == 'T12':
-		gal = (tank_specs[4][0] * (tank_specs[4][1] - float(dip))) + tank_specs[4][2]
+		gal = (tank_specs[4][0] * (tank_specs[4][1] - dip)) + tank_specs[4][2]
 	elif tank == 'T13' or tank == 'T14' or tank == 'T17':
-		gal = (tank_specs[5][0] * (tank_specs[5][1] - float(dip))) + tank_specs[5][2]
+		gal = (tank_specs[5][0] * (tank_specs[5][1] - dip)) + tank_specs[5][2]
 	elif tank == 'T15' or tank == 'T16':
-		gal = (tank_specs[6][0] * (tank_specs[6][1] - float(dip))) + tank_specs[6][2]
+		gal = (tank_specs[6][0] * (tank_specs[6][1] - dip)) + tank_specs[6][2]
 	elif tank == 'T18':
-		gal = (tank_specs[7][0] * (tank_specs[7][1] - float(dip))) + tank_specs[7][2]
+		gal = (tank_specs[7][0] * (tank_specs[7][1] - dip)) + tank_specs[7][2]
 	elif tank == 'T19' or tank == 'T20' or tank == 'T21':
-		gal = (tank_specs[8][0] * (tank_specs[8][1] - float(dip))) + tank_specs[8][2]
+		gal = (tank_specs[8][0] * (tank_specs[8][1] - dip)) + tank_specs[8][2]
 	elif tank == 'T22':
-		gal = (tank_specs[9][0] * (tank_specs[9][1] - float(dip))) + tank_specs[9][2]
+		gal = (tank_specs[9][0] * (tank_specs[9][1] - dip)) + tank_specs[9][2]
 	else:
 		pass
 
